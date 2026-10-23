@@ -1,0 +1,64 @@
+table_name,ordinal_position,column_name,data_type,is_nullable,column_default
+ss_budget_audit_logs,1,id,bigint,NO,null
+ss_budget_audit_logs,2,user_id,uuid,NO,null
+ss_budget_audit_logs,3,budget_id,uuid,NO,null
+ss_budget_audit_logs,4,action,text,NO,null
+ss_budget_audit_logs,5,old_amount,numeric,YES,null
+ss_budget_audit_logs,6,new_amount,numeric,YES,null
+ss_budget_audit_logs,7,changed_at,timestamp with time zone,NO,now()
+ss_budgets,1,id,uuid,NO,gen_random_uuid()
+ss_budgets,2,user_id,uuid,NO,null
+ss_budgets,3,category_id,uuid,YES,null
+ss_budgets,4,period_type,text,NO,null
+ss_budgets,5,period_start,date,NO,null
+ss_budgets,6,period_end,date,NO,null
+ss_budgets,7,amount,numeric,NO,null
+ss_budgets,8,created_at,timestamp with time zone,NO,now()
+ss_budgets,9,updated_at,timestamp with time zone,NO,now()
+ss_categories,1,id,uuid,NO,gen_random_uuid()
+ss_categories,2,user_id,uuid,NO,null
+ss_categories,3,name,text,NO,null
+ss_categories,4,type,text,NO,null
+ss_categories,5,icon,text,YES,null
+ss_categories,6,color,text,YES,null
+ss_categories,7,is_active,boolean,NO,true
+ss_categories,8,is_default,boolean,NO,false
+ss_categories,9,created_at,timestamp with time zone,NO,now()
+ss_categories,10,updated_at,timestamp with time zone,NO,now()
+ss_expense_plans,1,id,uuid,NO,gen_random_uuid()
+ss_expense_plans,2,user_id,uuid,NO,null
+ss_expense_plans,3,category_id,uuid,NO,null
+ss_expense_plans,4,title,text,NO,null
+ss_expense_plans,5,planned_date,date,NO,null
+ss_expense_plans,6,planned_amount,numeric,NO,null
+ss_expense_plans,7,status,text,NO,'planned'::text
+ss_expense_plans,8,note,text,YES,null
+ss_expense_plans,9,created_at,timestamp with time zone,NO,now()
+ss_expense_plans,10,updated_at,timestamp with time zone,NO,now()
+ss_expenses,1,id,uuid,NO,gen_random_uuid()
+ss_expenses,2,user_id,uuid,NO,null
+ss_expenses,3,category_id,uuid,NO,null
+ss_expenses,4,plan_id,uuid,YES,null
+ss_expenses,5,amount,numeric,NO,null
+ss_expenses,6,expense_date,date,NO,null
+ss_expenses,7,payment_method,text,NO,'other'::text
+ss_expenses,8,description,text,NO,''::text
+ss_expenses,9,note,text,YES,null
+ss_expenses,10,created_at,timestamp with time zone,NO,now()
+ss_expenses,11,updated_at,timestamp with time zone,NO,now()
+ss_incomes,1,id,uuid,NO,gen_random_uuid()
+ss_incomes,2,user_id,uuid,NO,null
+ss_incomes,3,category_id,uuid,NO,null
+ss_incomes,4,amount,numeric,NO,null
+ss_incomes,5,income_date,date,NO,null
+ss_incomes,6,status,text,NO,'received'::text
+ss_incomes,7,description,text,NO,''::text
+ss_incomes,8,note,text,YES,null
+ss_incomes,9,created_at,timestamp with time zone,NO,now()
+ss_incomes,10,updated_at,timestamp with time zone,NO,now()
+ss_settings,1,user_id,uuid,NO,null
+ss_settings,2,currency,text,NO,'VND'::text
+ss_settings,3,timezone,text,NO,'Asia/Ho_Chi_Minh'::text
+ss_settings,4,week_start,smallint,NO,1
+ss_settings,5,created_at,timestamp with time zone,NO,now()
+ss_settings,6,updated_at,timestamp with time zone,NO,now()

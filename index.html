@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartSpend - Quản lý chi tiêu thông minh</title>
+  <meta name="description" content="SmartSpend giúp bạn ghi chép chi tiêu, đặt ngân sách và hiểu tiền của mình đi đâu mỗi tháng. Đăng ký để nhận tin khi ra mắt.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">SmartSpend</a>
+      <nav class="nav">
+        <a href="#tinh-nang">Tính năng</a>
+        <a href="#cach-hoat-dong">Cách hoạt động</a>
+        <a class="btn" href="#dang-ky">Đăng ký</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Biết tiền đi đâu,<br>chi tiêu thông minh hơn mỗi ngày</h1>
+        <p>SmartSpend giúp bạn ghi chép thu chi trong vài giây, đặt ngân sách theo từng khoản và nhìn rõ thói quen chi tiêu của mình.</p>
+        <a class="btn" href="#dang-ky">Nhận tin khi ra mắt</a>
+      </div>
+    </section>
+
+    <section id="tinh-nang">
+      <div class="container">
+        <h2>Tính năng chính</h2>
+        <div class="grid">
+          <article class="card"><div class="icon" aria-hidden="true">✍️</div><h3>Ghi chép nhanh</h3><p>Nhập một khoản chi chỉ trong vài giây, phân loại tự động theo danh mục quen thuộc.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🎯</div><h3>Ngân sách rõ ràng</h3><p>Đặt hạn mức theo tháng cho từng danh mục và nhận nhắc nhở khi sắp vượt.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">📊</div><h3>Báo cáo trực quan</h3><p>Biểu đồ thu chi theo tuần, tháng giúp bạn thấy khoản nào đang tốn nhiều nhất.</p></article>
+          <article class="card"><div class="icon" aria-hidden="true">🔒</div><h3>Dữ liệu riêng tư</h3><p>Thông tin của bạn được lưu an toàn và chỉ bạn mới xem được.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cach-hoat-dong">
+      <div class="container">
+        <h2>Cách hoạt động</h2>
+        <div class="grid steps">
+          <article class="card"><h3>Ghi lại khoản chi</h3><p>Nhập số tiền và chọn danh mục ngay khi vừa chi tiêu.</p></article>
+          <article class="card"><h3>Đặt ngân sách</h3><p>Chọn mức chi tối đa cho mỗi danh mục trong tháng.</p></article>
+          <article class="card"><h3>Xem và điều chỉnh</h3><p>Theo dõi báo cáo để cắt giảm những khoản không cần thiết.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dang-ky" class="signup">
+      <div class="container">
+        <h2>Đăng ký nhận tin ra mắt</h2>
+        <form id="lead-form" class="form-card" novalidate>
+          <div class="field">
+            <label for="full_name">Họ và tên</label>
+            <input id="full_name" name="full_name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+          </div>
+          <div class="field">
+            <label for="note">Bạn mong muốn điều gì ở SmartSpend? (không bắt buộc)</label>
+            <textarea id="note" name="note" maxlength="500"></textarea>
+          </div>
+          <button class="btn" type="submit">Đăng ký</button>
+          <p id="lead-status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 SmartSpend. Mọi quyền được bảo lưu.</div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

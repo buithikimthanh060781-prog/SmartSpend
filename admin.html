@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SmartSpend - Danh sách đăng ký</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">SmartSpend</a>
+      <nav class="nav">
+        <button id="logout-btn" class="btn btn-small" type="button" hidden>Đăng xuất</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin">
+    <!-- Đăng nhập -->
+    <section id="login-view" class="admin-login">
+      <h2>Đăng nhập quản trị</h2>
+      <form id="login-form" class="form-card" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" name="email" type="email" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="login-password">Mật khẩu</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn" type="submit">Đăng nhập</button>
+        <p id="login-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- Danh sách -->
+    <section id="list-view" hidden>
+      <div class="list-head">
+        <h2>Danh sách đăng ký <span id="count" class="badge">0</span></h2>
+        <div class="list-tools">
+          <input id="search" type="search" placeholder="Tìm theo tên hoặc email..." aria-label="Tìm kiếm">
+          <button id="refresh-btn" class="btn btn-small btn-ghost" type="button">Làm mới</button>
+          <button id="export-btn" class="btn btn-small" type="button">Xuất CSV</button>
+        </div>
+      </div>
+      <p id="list-status" class="status" role="status" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Họ tên</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mong muốn</th>
+              <th scope="col">Ngày đăng ký</th>
+            </tr>
+          </thead>
+          <tbody id="leads-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
